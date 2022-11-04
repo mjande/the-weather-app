@@ -1,0 +1,94 @@
+@use 'sass:color';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@600&display=swap');
+
+
+* {
+  border: solid;
+}
+
+html {
+  line-height: 1.6;
+  color: #444444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2, 
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0;
+}
+
+h1 {
+  margin: 0 0 1.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article {
+  width: 500px;
+  height: 300px;
+  margin: 0 2rem;
+
+  border-radius: 0.5rem;
+}
+
+form {
+  border-radius: 1rem;
+  width: fit-content;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+input {
+  min-width: 200px;
+  border-radius: 0.5rem;
+}
+
+.button {
+  display: block;
+  font-size: 1rem;
+  border: 1px solid #65AFFF;
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.5rem;
+
+  background: #65AFFF;
+  color: white;
+}
+
+.button:hover,
+.button:focus {
+  background: color.scale(#65AFFF, $blackness: 10%);
+  border: 1px solid color.scale(#65AFFF, $blackness: 10%)
+}
+
+.button:active {
+  background: color.scale(#65AFFF, $blackness: 20%);
+  border: 1px solid color.scale(#65AFFF, $blackness: 20%);
+}
+
