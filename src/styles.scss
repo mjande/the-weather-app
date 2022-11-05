@@ -1,10 +1,11 @@
 @use 'sass:color';
+@use 'current-weather';
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@600&display=swap');
 
 
 * {
-  border: solid;
+  // border: solid;
 }
 
 html {
@@ -23,10 +24,15 @@ h5 {
   line-height: 1.2;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
+  margin-top: 0;
 }
 
 body {
   margin: 0;
+
+  background: #fceabb;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(#f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(#f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header {
@@ -34,6 +40,7 @@ header {
   flex-direction: column;
   align-items: center;
   margin: 5rem 0;
+  background: transparent;
 }
 
 h1 {
@@ -44,11 +51,10 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: transparent;
 }
 
 article {
-  width: 500px;
-  height: 300px;
   margin: 0 2rem;
 
   border-radius: 0.5rem;

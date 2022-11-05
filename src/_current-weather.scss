@@ -1,0 +1,50 @@
+article.current {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 
+    [header] 10%
+    [icon-temp] 25% 
+    [feels-like] 10% 
+    [high-low-labels] 5%
+    [high-low-temps] 15%
+    [sunrise-sunset-labels] 5%
+    [sunrise-sunset-times] 15%
+    [visibility] 15%;
+  grid-row-gap: 0.25rem;
+  grid-column-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+
+  background: whitesmoke;
+  padding: 36px;
+}
+
+.current-header {
+  grid-column: 1 / 3;
+  margin: 0;
+}
+
+.current-temp {
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+  left: 0.4rem;
+}
+
+.current-visibility {
+  grid-column: 1 / 3;
+}
+
+.current-feel-temp,
+.current-high-temp,
+.current-low-temp,
+.current-sunrise-time,
+.current-sunset-time {
+  position: relative;
+  left: 0.15rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+
