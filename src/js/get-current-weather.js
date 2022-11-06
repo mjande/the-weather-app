@@ -1,6 +1,11 @@
-async function getLocationData() {
-  const formData = new FormData(document.querySelector("form"));
-  const locationName = formData.get('location');
+async function getLocationData(location) {
+  let locationName;
+  if (location) {
+    locationName = location;
+  } else {
+    const formData = new FormData(document.querySelector("form"));
+    locationName = formData.get('location');
+  }
   
   const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${locationName}&limit=1&appid=4b49aa39132885dedef1febff0e7aab2`)
   return response.json();
